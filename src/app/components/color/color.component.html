@@ -7,6 +7,7 @@
 </div>
 
 <ul class="list-group">
+  <li [class]="getAllColors()" routerLink="/cars" >Tüm Renkler</li>
   <li routerLink="/cars/color/{{color.colorId}}"
     [class]="getCurrentColor(color)" 
     (click)="setCurrentColor(color)" 

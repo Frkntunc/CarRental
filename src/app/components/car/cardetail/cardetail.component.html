@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>BrandName</th>
+        <th>ColorName</th>
+        <th>ModelYear</th>
+        <th>DailyPrice</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+
+    <tr *ngFor="let carDetail of carDetails">
+        <td>{{carDetail.brandName}}</td>
+        <td>{{carDetail.colorName}}</td>
+        <td>{{carDetail.modelYear}}</td>
+        <td>{{carDetail.dailyPrice}}</td>
+        <td>{{carDetail.description}}</td>
+    </tr>
+
+    <img *ngFor="let carImage of carImages" [src]="getImagePath(carImage.imagePath)" class="img-fluid" alt="">
+
+</table>
